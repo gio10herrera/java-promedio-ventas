@@ -23,6 +23,14 @@ public class PromedioVentas {
             }
         }
         calcularPromediosPorVendedor();
+        calcularPromedioVentasAnuales();
+    }
+
+    private static void calcularPromedioVentasAnuales() {
+        for (int i = 0; i < n; i++) {
+            promVentasAnuales += promPorVendedor[i];
+        }
+        promVentasAnuales = promVentasAnuales / n;
     }
 
     private static void calcularPromediosPorVendedor() {
