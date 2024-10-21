@@ -22,5 +22,15 @@ public class PromedioVentas {
                 ventasTrismetresVendedores[i][j] = input.nextDouble();
             }
         }
+        calcularPromediosPorVendedor();
+    }
+
+    private static void calcularPromediosPorVendedor() {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < 4; j++) {
+                promPorVendedor[i] += ventasTrismetresVendedores[i][j];
+            }
+            promPorVendedor[i] = promPorVendedor[i] / 4;
+        }
     }
 }
