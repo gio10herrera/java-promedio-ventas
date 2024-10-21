@@ -14,6 +14,13 @@ public class PromedioVentas {
         nombresVendedores = new String[n];
         ventasTrismetresVendedores = new double[n][4];
         promPorVendedor = new double[n];
-
+        for (int i = 0; i < n; i++) {
+            System.out.println("Ingrese el nombre del vendedor : ");
+            nombresVendedores[i] = input.next();
+            for (int j = 0; j < 4; j++) {
+                System.out.println("Digite la venta del trimestre " + (j + 1) + ": ");
+                ventasTrismetresVendedores[i][j] = input.nextDouble();
+            }
+        }
     }
 }
