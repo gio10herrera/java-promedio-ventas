@@ -9,18 +9,19 @@ public class PromedioVentas {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Numero de vendedores: ");
+        System.out.print("Numero de vendedores: ");
         n = input.nextInt();
         nombresVendedores = new String[n];
         ventasTrismetresVendedores = new double[n][4];
         promPorVendedor = new double[n];
         for (int i = 0; i < n; i++) {
-            System.out.println("Ingrese el nombre del vendedor : ");
+            System.out.print("Ingrese el nombre del vendedor : ");
             nombresVendedores[i] = input.next();
             for (int j = 0; j < 4; j++) {
-                System.out.println("Digite la venta del trimestre " + (j + 1) + ": ");
+                System.out.print("Digite la venta del trimestre " + (j + 1) + ": ");
                 ventasTrismetresVendedores[i][j] = input.nextDouble();
             }
+            System.out.println();
         }
         calcularPromediosPorVendedor();
         calcularPromedioVentasAnuales();
