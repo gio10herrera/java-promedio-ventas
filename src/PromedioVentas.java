@@ -24,6 +24,14 @@ public class PromedioVentas {
         }
         calcularPromediosPorVendedor();
         calcularPromedioVentasAnuales();
+        mostrarPromediosPorVendedor();
+    }
+
+    private static void mostrarPromediosPorVendedor() {
+        System.out.println("Promedio de vendedores:\n\n");
+        for (int i = 0; i < n; i++) {
+            System.out.print((i+1) + ". Nombre: " + nombresVendedores[i] + "\tPromedio: " + promPorVendedor[i] + "\n");
+        }
     }
 
     private static void calcularPromedioVentasAnuales() {
